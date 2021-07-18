@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import Main from './Pages/Main';
+import AddProfile from './Pages/AddProfile';
+import Contact from './Pages/Contact'
+import Enquiry from './Pages/Enquiry'
+import Layout from './Components/Layout';
 
+// routes all the pages into the main app
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route path="/Contact">
+          <Contact />
+        </Route>
+        <Route path="/Enquiry">
+          <Enquiry />
+        </Route>
+      </Switch>
+      </Layout>
+    </Router>
   );
 }
 
