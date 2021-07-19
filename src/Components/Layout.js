@@ -17,7 +17,9 @@ import Button from '@material-ui/core/Button';
 const menuItems = [
     {
         text: 'Home',
-        icon: <Home color="primary" />,
+        icon: <Home 
+        fontSize="large"
+        color="primary" />,
         path: '/'
     },
     {
