@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { makeStyles } from '@material-ui/core';
+import { Container, makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import { LocationOn, Work } from '@material-ui/icons';
@@ -19,6 +19,11 @@ const useStyles = makeStyles({
       marginTop: 20,
       marginBottom: 20,
     },
+    container: {
+      height: 1920,
+      width: 1080,
+      marginTop: 20,
+    }
 })
 
 function Main() {
@@ -26,11 +31,12 @@ function Main() {
     const classes = useStyles()
     return ( 
     
-      <container className = "Main" maxWidth="xl" >
-        <br></br>
-        <form noValidate autoComplete = "on">
-
-        <TextField 
+      <Container className={classes.container}>
+       
+       <form 
+       noValidate
+       autoComplete="off" >
+       <TextField 
         className = { classes.field }
         id = "keySearch"
         label = "Job title or keyword"
@@ -70,10 +76,13 @@ function Main() {
         size = 'large'
         onClick = {() => alert('you clicked me')} >
         Search </Button> 
-      
-        </form>
 
-      </container>
+       </form>
+
+       
+
+      </Container>
+      
     );
 }
 

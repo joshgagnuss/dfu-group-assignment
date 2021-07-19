@@ -8,6 +8,8 @@ const useStyles = makeStyles({
   background: '#f9f9f9',
   width: '100%',
   marginTop: 40,
+  height: 1080,
+  width: 1920,
  },
  lines: {
    marginTop: 20,

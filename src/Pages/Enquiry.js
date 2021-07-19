@@ -8,22 +8,26 @@ const useStyles = makeStyles({
     marginLeft: 10,
     marginTop: 10,
     display: 'block',
-    background: '#f4f4f4'
+    
   },
   form: {
     marginTop: 20,
   },
   input: {
     marginLeft: 10,
-    marginTop: 10,
+    marginTop: 30,
     display: 'block',
-    background: '#f4f4f4'
+   
   },
   button: {
     marginTop: 20,
     marginBottom: 20,
     marginLeft: 10,
   },
+  container: {
+    height: 1080,
+    width: 1920,
+  }
   
 })
 
@@ -31,7 +35,8 @@ function Enquiry() {
   // custom css 
   const classes = useStyles()
     return (
-      <Container>
+      <Container
+      className={classes.container}>
         <form className={classes.form} noValidate autoComplete="off">
          <TextField 
          className={classes.name}
@@ -42,10 +47,16 @@ function Enquiry() {
          label="Email" 
           required />
          <TextField 
-         className={classes.input}
-         label="Enquiry" 
+         className={classes.name}
+         label="Subject" 
+         required />
+         <TextField 
+         className={classes.input} 
          required
-         multiline />
+         multiline
+         variant="outlined"
+         label="Your message:"
+         rows="5" />
          <Button
          className={classes.button}
          variant="contained"

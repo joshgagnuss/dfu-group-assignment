@@ -37,17 +37,23 @@ const menuItems = [
     },
     {
         text: 'Enquiry',
-        icon: <QuestionAnswer color="primary" />,
+        icon: <QuestionAnswer 
+        color="default"
+        fontSize="small" />,
         path: '/Enquiry'
     },
     {
         text: 'Contact Us',
-        icon: <ContactSupport color="primary" />,
+        icon: <ContactSupport 
+        color="default" 
+        fontSize="small"/>,
         path: '/Contact'
     },
     {
         text: 'Logout',
-        icon: <ExitToApp color="primary" />,
+        icon: <ExitToApp 
+        color="default"
+        fontSize="small" />,
         path: ''
     },
 ]
@@ -80,6 +86,10 @@ const useStyles = makeStyles((theme) => {
     toolbar: theme.mixins.toolbar,
     title: {
         flexGrow: 1
+    },
+    employer: {
+        marginLeft: 10,
+        background: '#b53d9e'
     }
 }
 })
@@ -115,6 +125,14 @@ function Layout({ children }){
                          size="large"
                          onClick={()=> { alert('clicky click')}}>
                              Login
+                         </Button>
+                         <Button 
+                         className={classes.employer}
+                         variant="contained"
+                         color="secondary"
+                         size="large"
+                         onClick={()=> { alert('clicky click')}}>
+                             For Employers
                          </Button>
                  </Toolbar>
              </AppBar>
