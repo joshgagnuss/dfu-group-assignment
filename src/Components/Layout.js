@@ -70,7 +70,6 @@ const useStyles = makeStyles((theme) => {
     },
     drawer: {
         width: drawerWidth,
-        
     },
     drawerPaper: {
         width: drawerWidth,
@@ -104,7 +103,7 @@ function Layout({ children }){
     const history = useHistory();
     // used to highlight current page selected on side bar
     const location = useLocation();
-
+    // main
     return (
       // renders top menu bar 
         <div className={classes.base}>
@@ -151,7 +150,7 @@ function Layout({ children }){
                         button
                         key={item.text}
                         onClick={() => history.push(item.path)}
-                        className={location.pathname == item.path ?classes.active : null}>
+                        className={location.pathname === item.path ?classes.active : null}>
                             <ListItemIcon>{item.icon}</ListItemIcon>
                             <ListItemText primary={item.text} />
                         </ListItem>

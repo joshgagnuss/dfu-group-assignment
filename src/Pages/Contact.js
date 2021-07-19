@@ -2,14 +2,14 @@ import React from 'react';
 import { Container, makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { EmailOutlined, HeadsetMicOutlined, LocationCityOutlined, ScheduleOutlined } from '@material-ui/icons';
+
 //custom css
 const useStyles = makeStyles({
  contact: {
   background: '#f9f9f9',
   width: '100%',
-  marginTop: 40,
   height: 1080,
-  width: 1920,
+  marginTop: 40,
  },
  lines: {
    marginTop: 20,
@@ -22,9 +22,10 @@ const useStyles = makeStyles({
  }
 })
 
-// main cointact card with map
 function Contact() {
+ // customer css
   const classes = useStyles()
+    // main
     return (
       <Container
       className={classes.contact}
