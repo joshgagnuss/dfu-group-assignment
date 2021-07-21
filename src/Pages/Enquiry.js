@@ -57,26 +57,21 @@ function Enquiry() {
     // main 
     return (
 
-      <Container
-      className={classes.container}>
+      <Container className={classes.container}>
         <form className={classes.form} noValidate autoComplete="off">
 
-         <TextField 
-         className={classes.name}
+         <TextField className={classes.name}
          label="Name"
          required />
 
-         <TextField 
-         className={classes.name}
+         <TextField className={classes.name}
          label="Email" 
           required />
 
-         <InputLabel 
-         className={classes.label}
+         <InputLabel className={classes.label}
          htmlFor="age-native-simple">Subject</InputLabel>
 
-        <Select
-        className={classes.select}
+        <Select className={classes.select}
           native
           value={state.subject}
           onChange={handleChange}
@@ -92,16 +87,14 @@ function Enquiry() {
           <option value={"General"}>General</option>
         </Select>
 
-         <TextField 
-         className={classes.input} 
+         <TextField className={classes.input} 
          required
          multiline
          variant="outlined"
          label="Your message:"
          rows="5" />
 
-         <Button
-         className={classes.button}
+         <Button className={classes.button}
          variant="contained"
          color="primary">
            Submit</Button>

@@ -27,42 +27,33 @@ function Contact() {
   const classes = useStyles()
     // main
     return (
-      <Container
-      className={classes.contact}
+      <Container className={classes.contact}
       maxWidth="xl">
 
-        <Typography
-        className={classes.lines}
+        <Typography className={classes.lines}
         variant="h6">
-          <HeadsetMicOutlined
-          className={classes.icon}
+          <HeadsetMicOutlined className={classes.icon}
           fontSize="small" />
          Phone: +65 XXXX XXXX 
         </Typography>
 
-        <Typography
-        className={classes.lines}
+        <Typography className={classes.lines}
         variant="h6">
-          <EmailOutlined 
-          className={classes.icon}
+          <EmailOutlined className={classes.icon}
           fontSize="small"/>
          Email: contact@workforce.com.sg
         </Typography>
 
-        <Typography
-        className={classes.lines}
+        <Typography className={classes.lines}
         variant="h6">
-          <LocationCityOutlined 
-          className={classes.icon}
+          <LocationCityOutlined className={classes.icon}
           fontSize="small"/>
          Address: 8 Wilkie Rd, #02-01 ATO, Singapore 228095
         </Typography>
 
-        <Typography
-        className={classes.lines}
+        <Typography className={classes.lines}
         variant="h6">
-          <ScheduleOutlined 
-          className={classes.icon}
+          <ScheduleOutlined  className={classes.icon}
           fontSize="small"/>
          Operating Hours: 9am - 6pm 
         </Typography>

@@ -66,7 +66,8 @@ const useStyles = makeStyles((theme) => {
    return { 
     page: {
         background: '#f9f9f9',
-        width: '100%'
+        width: '100%',
+        height: 1080
     },
     drawer: {
         width: drawerWidth,
@@ -86,12 +87,12 @@ const useStyles = makeStyles((theme) => {
     },
     toolbar: theme.mixins.toolbar,
     title: {
-        flexGrow: 1
+        flexGrow: 1,
     },
     employer: {
         marginLeft: 10,
         background: '#b53d9e'
-    }
+    },
 }
 })
 
@@ -107,52 +108,39 @@ function Layout({ children }){
     return (
       // renders top menu bar 
         <div className={classes.base}>
-             <AppBar 
-             className={classes.headBar}
-             elevation={0}>
+
+             <AppBar className={classes.headBar} elevation={0}>
                  <Toolbar>
                      {/* workforce header */}
-                     <Typography 
-                     className={classes.title}
-                     variant="h5">
-                     <BuildOutlined 
-                     fontSize="small"/>
+                     <Typography className={classes.title} variant="h5">
+                     <BuildOutlined fontSize="small"/>
                           Workforce 
                      </Typography>
-                     {/* Login button */}
-                         <Button 
-                         variant="contained"
-                         color="default"
-                         size="large"
+                         {/* Login button */}
+                         <Button variant="contained" color="default" size="large"
                          onClick={()=> { alert('clicky click')}}>
                              Login
                          </Button>
-                         <Button 
-                         className={classes.employer}
-                         variant="contained"
+                         {/** For employers button */}
+                         <Button className={classes.employer} variant="contained"
                          color="secondary"
                          size="large"
                          onClick={()=> { alert('clicky click')}}>
-                             For Employers
+                         For Employers
                          </Button>
+
                  </Toolbar>
              </AppBar>
 
-            <Drawer
-            className={classes.drawer}
-            variant="permanent"
-            acnhor="left"
-            classes={{ paper: classes.drawerPaper }}>
+            <Drawer className={classes.drawer} variant="permanent" acnhor="left" classes={{ paper: classes.drawerPaper }}>
                  {/* renders dynamic menu items  */}
                 <List>
                     {menuItems.map(item => (
-                        <ListItem
-                        button
-                        key={item.text}
+                        <ListItem button key={item.text}
                         onClick={() => history.push(item.path)}
                         className={location.pathname === item.path ?classes.active : null}>
-                            <ListItemIcon>{item.icon}</ListItemIcon>
-                            <ListItemText primary={item.text} />
+                        <ListItemIcon>{item.icon}</ListItemIcon>
+                        <ListItemText primary={item.text} />
                         </ListItem>
                     ))}
                 </List>
@@ -160,7 +148,6 @@ function Layout({ children }){
             {/* keeps menu items permanently visible */}
             <div className={classes.page}>
                 <div className={classes.toolbar}>
-
                 </div>
             {children}
             </div>

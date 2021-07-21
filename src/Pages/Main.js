@@ -2,50 +2,34 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { Container, makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import { LocationOn, Work } from '@material-ui/icons';
-import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Form from "@material-ui/core/FormControl";
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
 
 // custom css
+const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
-    field: {
-     marginTop: 10,
-     marginLeft: 50,
-     marginRight: 50,
-     width: '25%'
-    },
-    searchBtn: {
-      marginTop: 15,
-      marginBottom: 20,
-      marginLeft: 50,
-      width: '20%'
+    form: {
+     marginTop: 20,
+     width: `calc(100% - ${drawerWidth}px)`,
     },
     container: {
-      height: '1080px',
-      width: '100%',
-      marginTop: 20,
-    },
-    top: {
-     width: '100%'
+      marginLeft: drawerWidth,
+      marginRight: drawerWidth,
+      flexGrow: 1
     },
     bottom: {
-      width: '40%',
-      marginTop: '50%',
-    }, 
-    urgentJobs: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    '& > *': {
-      margin: theme.spacing(1),
-      width: theme.spacing(16),
-      height: theme.spacing(16),
-    }},
-    covidHeader: {
-      textAlign: 'center'
-    }
-    
+      marginTop: 600,
+      marginLeft: drawerWidth,
+      marginRight: drawerWidth
+    },
 }));
 
 function Main() {
@@ -53,82 +37,155 @@ function Main() {
 const classes = useStyles()
     //main 
     return ( 
-    
-    <Container
-    className={classes.container}>
+      <>
+      <Form className={classes.form}>
+        <Grid className={classes.container}
+        container xs={12}
+        direction="row"
+        alignContent="center"
+        alignItems="stretch"
+        spacing={2}
+        >
 
-       <Container
-       className={classes.top}>
-       <form 
-       noValidate
-       autoComplete="off" >
-
-       <TextField 
-        className = { classes.field }
-        id = "keySearch"
-        label = "Job title or keyword"
-        variant = "outlined"
-        required
-        InputProps={{
-          startAdornment: (
-            <InputAdornment 
-            position="start"
-            >
-              <Work
-              fontSize="small" />
-            </InputAdornment>
-          ),
-        }} />
-
-        <TextField 
-        className = { classes.field }
-        id = "areaSearch"
-        label = "Area, city or town"
-        variant = "outlined"
-        required 
-        InputProps={{
+          <Grid item xs={12} sm={4}>
+          <TextField className = { classes.field }  
+          label = "Job title or keyword"
+          variant = "outlined"
+          required
+          InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <LocationOn 
-              fontSize="small"/>
+              <Work fontSize="small" />
             </InputAdornment>
           ),
-        }}/>
+          }} />
+          </Grid>
 
-        <Button 
-        className = { classes.searchBtn }
-        variant = "contained"
-        color = "primary"
-        startIcon = { < SearchIcon / > }
-        size = 'large'
-        onClick = {() => alert('you clicked me')} >
-        Search </Button> 
+          <Grid item xs={12} sm={4}>
+          <TextField className = { classes.field }
+          label = "Area, city or town"
+          variant = "outlined"
+          required 
+          InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <LocationOn fontSize="small"/>
+            </InputAdornment>
+          ),
+          }}/>
+          </Grid>
 
-      </form>
+          <Grid item xs={12} sm={4}>
+          <Button  className = { classes.searchBtn }
+          variant = "contained"
+          color = "primary"
+          startIcon = { < SearchIcon / > }
+          size = 'large'
+          onClick = {() => alert('you clicked me')} >
+          Search </Button> 
+          </Grid>
+        </Grid>
+      </Form>
 
-      </Container>
-       
-      <Container
-      className={classes.bottom}>
+      <div className={classes.bottom}>
+        <Grid container xs={12}
+        direction="row"
+        alignContent="center"
+        alignItems="stretch"
+        spacing={2}>
 
-      <Typography
-      className={classes.covidHeader}
-      variant="h6"
-      color="secondary">
-      Jobs Requiring Urgent Applicants
-      </Typography>
-        
-      <div className={classes.urgentJobs}>
-      <Paper elevation={3}>Software Engineering</Paper> 
-      <Paper elevation={3}>Chef</Paper> 
-      <Paper elevation={3}>Nurse</Paper> 
-      <Paper elevation={3}>Waiter</Paper> 
-      </div>
+          <Grid item xs={12} sm={12}>
+            <Typography variant="h5" color="secondary">
+              Required Urgently
+            </Typography>
+          </Grid>
 
-      </Container>
-
-    </Container>
+          <Grid item xs={6} sm={3}>
+          <Card>
+          <CardMedia className={classes.media}
+          image=""
+          title="McDonald's"
+          />
+         <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            McDonalds
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Cashier
+          </Typography>
+         </CardContent>
       
+         <CardActions>
+         <Button size="small" color="primary">
+          Share
+         </Button> 
+
+         <Button size="small" color="primary">
+          Learn More
+         </Button>
+         </CardActions>
+         </Card>
+          </Grid>
+
+          <Grid item xs={6} sm={3}>
+          <Card>
+          <CardMedia
+          image=""
+          title="McDonald's"
+          />
+         <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            HSBC
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Clerk
+          </Typography>
+        </CardContent>
+        <CardActions>
+
+        <Button size="small" color="primary">
+          Share
+        </Button> 
+
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+
+        </CardActions>
+        </Card>
+        </Grid>
+
+        <Grid item xs={6} sm={3}>
+          <Card>
+          <CardMedia
+          image=""
+          title="McDonald's"
+          />
+         <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+            NTUC
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Accountant
+          </Typography>
+        </CardContent>
+        <CardActions>
+
+        <Button size="small" color="primary">
+          Share
+        </Button> 
+
+        <Button size="small" color="primary">
+          Learn More
+        </Button>
+
+        </CardActions>
+        </Card>
+        </Grid>
+        </Grid>
+      </div>
+   
+      </>
     );
 }
 
