@@ -4,6 +4,7 @@ import Main from './Pages/Main';
 import AddProfile from './Pages/AddProfile';
 import Contact from './Pages/Contact'
 import Enquiry from './Pages/Enquiry'
+import Profile from './Pages/Profile'
 import Layout from './Components/Layout';
 
 // routes all the pages into the main app
@@ -20,6 +21,12 @@ function App() {
         </Route>
         <Route path="/Enquiry">
           <Enquiry />
+        </Route>
+        <Route path="/Profile">
+          <Profile />
+        </Route>
+        <Route path="/AddProfile">
+          <AddProfile />
         </Route>
       </Switch>
       </Layout>

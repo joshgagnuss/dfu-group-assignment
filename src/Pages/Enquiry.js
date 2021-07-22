@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button'
 import Select from '@material-ui/core/Select';
 import InputLabel from '@material-ui/core/InputLabel';
+import SendIcon from '@material-ui/icons/Send';
 
 // custom css
 const useStyles = makeStyles({
@@ -96,7 +97,7 @@ function Enquiry() {
 
          <Button className={classes.button}
          variant="contained"
-         color="primary">
+         color="primary" startIcon = { < SendIcon / > }>
            Submit</Button>
     </form>
       </Container>

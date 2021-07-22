@@ -38,16 +38,16 @@ const classes = useStyles()
     //main 
     return ( 
       <>
+      {/** top seach bar with grid layout */}
       <Form className={classes.form}>
-        <Grid className={classes.container}
-        container xs={12}
+        <Grid container className={classes.container}
         direction="row"
         alignContent="center"
-        alignItems="stretch"
+        alignItems="center"
         spacing={2}
         >
 
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} md={4} lg={4}>
           <TextField className = { classes.field }  
           label = "Job title or keyword"
           variant = "outlined"
@@ -61,7 +61,7 @@ const classes = useStyles()
           }} />
           </Grid>
 
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} md={4} lg={4}>
           <TextField className = { classes.field }
           label = "Area, city or town"
           variant = "outlined"
@@ -75,7 +75,7 @@ const classes = useStyles()
           }}/>
           </Grid>
 
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4} lg={4}>
           <Button  className = { classes.searchBtn }
           variant = "contained"
           color = "primary"
@@ -87,101 +87,95 @@ const classes = useStyles()
         </Grid>
       </Form>
 
+      {/** bottom required urgently cards  */}
       <div className={classes.bottom}>
-        <Grid container xs={12}
+        <Grid container 
         direction="row"
         alignContent="center"
         alignItems="stretch"
         spacing={2}>
 
-          <Grid item xs={12} sm={12}>
-            <Typography variant="h5" color="secondary">
+          <Grid item xs={12} md={12} lg={12}>
+          <Typography variant="h5" color="secondary">
               Required Urgently
             </Typography>
           </Grid>
 
-          <Grid item xs={6} sm={3}>
+          <Grid item xs={12} md={4} lg={4}>
           <Card>
           <CardMedia className={classes.media}
           image=""
           title="McDonald's"
           />
-         <CardContent>
+          <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            McDonalds
+            Foodpanda
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Cashier
+            Front End Engineer
           </Typography>
-         </CardContent>
-      
-         <CardActions>
-         <Button size="small" color="primary">
+          </CardContent>
+          <CardActions>
+          <Button size="small" color="primary">
           Share
-         </Button> 
-
-         <Button size="small" color="primary">
+          </Button>
+          <Button size="small" color="primary">
           Learn More
-         </Button>
-         </CardActions>
-         </Card>
+          </Button>
+          </CardActions>
+          </Card>
           </Grid>
 
-          <Grid item xs={6} sm={3}>
+          <Grid item xs={12} md={4} lg={4}>
           <Card>
           <CardMedia
           image=""
           title="McDonald's"
           />
-         <CardContent>
+          <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             HSBC
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Clerk
+            Data Analayst
           </Typography>
-        </CardContent>
-        <CardActions>
-
-        <Button size="small" color="primary">
+          </CardContent>
+          <CardActions>
+          <Button size="small" color="primary">
           Share
-        </Button> 
-
-        <Button size="small" color="primary">
+          </Button> 
+          <Button size="small" color="primary">
           Learn More
-        </Button>
+          </Button>
+          </CardActions>
+          </Card>
+          </Grid>
 
-        </CardActions>
-        </Card>
-        </Grid>
-
-        <Grid item xs={6} sm={3}>
+          <Grid item xs={12} md={4} lg={4}>
           <Card>
           <CardMedia
           image=""
           title="McDonald's"
           />
-         <CardContent>
+          <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             NTUC
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Accountant
+            Graphic Designer
           </Typography>
-        </CardContent>
-        <CardActions>
-
-        <Button size="small" color="primary">
+          </CardContent>
+          <CardActions>
+          <Button size="small" color="primary">
           Share
-        </Button> 
-
-        <Button size="small" color="primary">
+          </Button> 
+          <Button size="small" color="primary">
           Learn More
-        </Button>
+          </Button>
+          </CardActions>
+          </Card>
+          </Grid>
 
-        </CardActions>
-        </Card>
-        </Grid>
         </Grid>
       </div>
    

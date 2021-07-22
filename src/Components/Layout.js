@@ -23,11 +23,6 @@ const menuItems = [
         path: '/'
     },
     {
-        text: 'Register Account',
-        icon: <PersonAddIcon color="primary" />,
-        path: '/AddProfile'
-    },
-    {
         text: 'My Profile',
         icon: <Person color="primary" />,
         path: '/Profile'
@@ -58,6 +53,12 @@ const menuItems = [
         fontSize="small" />,
         path: ''
     },
+    {
+        text: 'Register Account',
+        icon: <PersonAddIcon color="default"
+        fontSize="small" />,
+        path: '/AddProfile'
+    },
 ]
 
 // custom css 
@@ -67,7 +68,7 @@ const useStyles = makeStyles((theme) => {
     page: {
         background: '#f9f9f9',
         width: '100%',
-        height: 1080
+        height: 2000
     },
     drawer: {
         width: drawerWidth,
