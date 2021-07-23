@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => {
     page: {
         background: '#f9f9f9',
         width: '100%',
-        height: 2000
+        height: 1080
     },
     drawer: {
         width: drawerWidth,

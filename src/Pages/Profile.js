@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, makeStyles, Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core';
 import image from '../images/john-smith.jfif'
+import EditOutlinedIcon from '@material-ui/icons/EditOutlined';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     width: 700,
    background: '#f9faff'
   }
-}))
+}));
 
 function Profile() {
   const classes = useStyles()
@@ -65,7 +66,7 @@ function Profile() {
           </Typography>
           </CardContent>
           <CardActions>
-          <Button size="small">Edit</Button>
+          <Button size="small" startIcon = { < EditOutlinedIcon / > }></Button>
           </CardActions>
           </Card>
           </Grid>
@@ -81,7 +82,7 @@ function Profile() {
           </Typography>
           </CardContent>
           <CardActions>
-          <Button size="small">Edit</Button>
+          <Button size="small" startIcon = { < EditOutlinedIcon / > }></Button>
           </CardActions>
           </Card>
           </Grid>
@@ -97,7 +98,7 @@ function Profile() {
           </Typography>
           </CardContent>
           <CardActions>
-          <Button size="small">Edit</Button>
+          <Button size="small" startIcon = { < EditOutlinedIcon / > }></Button>
           </CardActions>
           </Card>
           </Grid>
@@ -115,7 +116,7 @@ function Profile() {
           </Typography>
           </CardContent>
           <CardActions>
-          <Button size="small">Edit</Button>
+          <Button size="small" startIcon = { < EditOutlinedIcon / > }></Button>
           </CardActions>
           </Card>
           </Grid>

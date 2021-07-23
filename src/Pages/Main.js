@@ -2,34 +2,39 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { makeStyles } from '@material-ui/core';
+import { FormGroup, makeStyles } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import SearchIcon from '@material-ui/icons/Search';
 import { LocationOn, Work } from '@material-ui/icons';
 import Grid from '@material-ui/core/Grid';
-import Form from "@material-ui/core/FormControl";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
+import image1 from '../images/food-panda.png'
+import image2 from '../images/hsbc-logo.png'
+import image3 from '../images/ntuc-fairprice-logo.jpg'
 
 // custom css
 const drawerWidth = 240;
 const useStyles = makeStyles((theme) => ({
-    form: {
-     marginTop: 20,
-     width: `calc(100% - ${drawerWidth}px)`,
+  root: {
+    display: 'flex',
+    '& > *': {
+     margin: theme.spacing(5),
     },
-    container: {
-      marginLeft: drawerWidth,
-      marginRight: drawerWidth,
-      flexGrow: 1
-    },
+    marginLeft: 100
+  },
     bottom: {
-      marginTop: 600,
-      marginLeft: drawerWidth,
-      marginRight: drawerWidth
+      marginTop: 400,
+      display: 'flex',
+    '& > *': {
+      margin: theme.spacing(10),
+    }, 
     },
+    main: {
+      width: `cal(100% - ${drawerWidth}px)`
+    }
 }));
 
 function Main() {
@@ -37,82 +42,70 @@ function Main() {
 const classes = useStyles()
     //main 
     return ( 
-      <>
+      <div className={classes.main}>
       {/** top seach bar with grid layout */}
-      <Form className={classes.form}>
-        <Grid container className={classes.container}
-        direction="row"
-        alignContent="center"
-        alignItems="center"
-        spacing={2}
-        >
+      <FormGroup className={classes.root} noValidate aautocomplete="off">
+        <Grid container  alignItems="center" spacing={3} direction="row" alignContent="center">
 
-          <Grid item xs={12} md={4} lg={4}>
-          <TextField className = { classes.field }  
+          <Grid item xs={12} md={6} lg={4}>
+          <TextField
           label = "Job title or keyword"
           variant = "outlined"
           required
           InputProps={{
           startAdornment: (
-            <InputAdornment position="start">
-              <Work fontSize="small" />
-            </InputAdornment>
-          ),
-          }} />
+          <InputAdornment position="start">
+          <Work fontSize="small" />
+          </InputAdornment>
+          ),}}/>
           </Grid>
 
-          <Grid item xs={12} md={4} lg={4}>
-          <TextField className = { classes.field }
+          <Grid item xs={12} md={6} lg={4}>
+          <TextField
           label = "Area, city or town"
           variant = "outlined"
           required 
           InputProps={{
           startAdornment: (
-            <InputAdornment position="start">
-              <LocationOn fontSize="small"/>
-            </InputAdornment>
-          ),
-          }}/>
+          <InputAdornment position="start">
+          <LocationOn fontSize="small"/>
+          </InputAdornment>),}}/>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+          <Button variant="contained" color="primary" size="large" onClick = {() => alert('you clicked me')} startIcon = { < SearchIcon / > }>Search</Button>
           </Grid>
 
-          <Grid item xs={12} sm={4} lg={4}>
-          <Button  className = { classes.searchBtn }
-          variant = "contained"
-          color = "primary"
-          startIcon = { < SearchIcon / > }
-          size = 'large'
-          onClick = {() => alert('you clicked me')} >
-          Search </Button> 
-          </Grid>
         </Grid>
-      </Form>
+
+      </FormGroup>
 
       {/** bottom required urgently cards  */}
       <div className={classes.bottom}>
         <Grid container 
         direction="row"
         alignContent="center"
-        alignItems="stretch"
+        alignItems="flex-end"
         spacing={2}>
 
           <Grid item xs={12} md={12} lg={12}>
           <Typography variant="h5" color="secondary">
-              Required Urgently
-            </Typography>
+          Required Urgently
+          </Typography>
           </Grid>
 
-          <Grid item xs={12} md={4} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
           <Card>
           <CardMedia className={classes.media}
-          image=""
-          title="McDonald's"
-          />
+          component="img"
+          alt="Your Photo"
+          height="140"
+          src={image1}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Foodpanda
+          Foodpanda
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Front End Engineer
+          Front End Engineer
           </Typography>
           </CardContent>
           <CardActions>
@@ -126,18 +119,19 @@ const classes = useStyles()
           </Card>
           </Grid>
 
-          <Grid item xs={12} md={4} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
           <Card>
           <CardMedia
-          image=""
-          title="McDonald's"
-          />
+          component="img"
+          alt="Your Photo"
+          height="140"
+          src={image2}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            HSBC
+          HSBC
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Data Analayst
+          Data Analayst
           </Typography>
           </CardContent>
           <CardActions>
@@ -151,18 +145,19 @@ const classes = useStyles()
           </Card>
           </Grid>
 
-          <Grid item xs={12} md={4} lg={4}>
+          <Grid item xs={12} md={6} lg={4}>
           <Card>
           <CardMedia
-          image=""
-          title="McDonald's"
-          />
+          component="img"
+          alt="Your Photo"
+          height="140"
+          src={image3}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            NTUC
+          NTUC
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Graphic Designer
+          Graphic Designer
           </Typography>
           </CardContent>
           <CardActions>
@@ -179,7 +174,7 @@ const classes = useStyles()
         </Grid>
       </div>
    
-      </>
+      </div>
     );
 }
 
