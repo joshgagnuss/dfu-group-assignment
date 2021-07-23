@@ -31,18 +31,6 @@ function AddProfile() {
            <TextField label="Lastname" variant="outlined" />
           </Grid>
           <Grid item xs={12} md={6} lg={6}>
-           <TextField label="DOB - DD/MM/YYYY" variant="outlined" />
-          </Grid>
-          <Grid item xs={12} md={6} lg={6}>
-           <TextField label="About Me" variant="outlined" multiline rows="5" />
-          </Grid>
-          <Grid item xs={12} md={6} lg={6}>
-           <TextField label="Certifications" variant="outlined" multiline rows="3" />
-          </Grid>
-          <Grid item xs={12} md={6} lg={6}>
-           <TextField label="Previous Experience" variant="outlined" multiline rows="3" />
-          </Grid>
-          <Grid item xs={12} md={6} lg={6}>
            <TextField label="Email:" variant="outlined" />
           </Grid>
           <Grid item xs={12} md={6} lg={6}>

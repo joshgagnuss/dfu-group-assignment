@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     '& > *': {
      margin: theme.spacing(5),
     },
-    marginLeft: 100
+    marginLeft: 100,
   },
     bottom: {
       marginTop: 400,
