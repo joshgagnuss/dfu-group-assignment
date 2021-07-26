@@ -44,14 +44,12 @@ const classes = useStyles()
     return ( 
       <div className={classes.main}>
       {/** top seach bar with grid layout */}
-      <FormGroup className={classes.root} noValidate aautocomplete="off">
+      <FormGroup className={classes.root} noValidate autocomplete="off">
         <Grid container  alignItems="center" spacing={3} direction="row" alignContent="center">
 
           <Grid item xs={12} md={6} lg={4}>
-          <TextField
-          label = "Job title or keyword"
-          variant = "outlined"
-          required
+          <TextField label="Job title or keyword"
+          variant = "outlined" required
           InputProps={{
           startAdornment: (
           <InputAdornment position="start">
@@ -61,10 +59,8 @@ const classes = useStyles()
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
-          <TextField
-          label = "Area, city or town"
-          variant = "outlined"
-          required 
+          <TextField label = "Area, city or town"
+          variant = "outlined" required 
           InputProps={{
           startAdornment: (
           <InputAdornment position="start">
@@ -76,16 +72,12 @@ const classes = useStyles()
           </Grid>
 
         </Grid>
-
       </FormGroup>
 
       {/** bottom required urgently cards  */}
       <div className={classes.bottom}>
-        <Grid container 
-        direction="row"
-        alignContent="center"
-        alignItems="flex-end"
-        spacing={2}>
+        <Grid container direction="row" alignContent="center"
+        alignItems="flex-end" spacing={2}>
 
           <Grid item xs={12} md={12} lg={12}>
           <Typography variant="h5" color="secondary">
@@ -95,11 +87,8 @@ const classes = useStyles()
 
           <Grid item xs={12} md={6} lg={4}>
           <Card>
-          <CardMedia className={classes.media}
-          component="img"
-          alt="Your Photo"
-          height="140"
-          src={image1}/>
+          <CardMedia className={classes.media} component="img"
+          alt="Your Photo" height="140" src={image1}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
           Foodpanda
@@ -121,10 +110,7 @@ const classes = useStyles()
 
           <Grid item xs={12} md={6} lg={4}>
           <Card>
-          <CardMedia
-          component="img"
-          alt="Your Photo"
-          height="140"
+          <CardMedia component="img" alt="Your Photo" height="140"
           src={image2}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
@@ -147,11 +133,8 @@ const classes = useStyles()
 
           <Grid item xs={12} md={6} lg={4}>
           <Card>
-          <CardMedia
-          component="img"
-          alt="Your Photo"
-          height="140"
-          src={image3}/>
+          <CardMedia component="img" alt="Your Photo"
+          height="140" src={image3}/>
           <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
           NTUC

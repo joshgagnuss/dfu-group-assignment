@@ -24,30 +24,37 @@ function AddProfile() {
     return (
       <FormGroup className={classes.root} noValidate autoComplete="off">
         <Grid container justifyContent="flex-start" alignItems="center" spacing={3} direction="column" className={classes.container}>
+
           <Grid item xs={12} md={6} lg={6}>
-           <TextField id="outlined-basic" label="Firstname" variant="outlined" />
+           <TextField id="outlined-basic" label="Firstname" variant="outlined"/>
           </Grid>
+
           <Grid item xs={12} md={6} lg={6}> 
-           <TextField label="Lastname" variant="outlined" />
+           <TextField label="Lastname" variant="outlined"/>
           </Grid>
+
           <Grid item xs={12} md={6} lg={6}>
-           <TextField label="Email:" variant="outlined" />
+           <TextField label="Email:" variant="outlined"/>
           </Grid>
+
           <Grid item xs={12} md={6} lg={6}>
-           <TextField label="HP:" variant="outlined" />
+           <TextField label="HP:" variant="outlined"/>
           </Grid>
+
           <Grid item xs={12} md={6} lg={6}>
           <Button variant="contained" color="default" size="large" startIcon = { < AddPhotoAlternateTwoToneIcon / > }
           onClick={()=> { alert('cheese')}}>
           Upload Photo
           </Button>
           </Grid>
+
           <Grid item>
           <Button variant="contained" color="Primary" size="large" startIcon = { < PersonAddIcon / > }
           onClick={()=> { alert('A verification Email Has Been Sent')}}>
           Register
           </Button>
           </Grid>
+          
         </Grid>
       </FormGroup>
     );

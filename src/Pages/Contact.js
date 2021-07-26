@@ -6,9 +6,6 @@ import { EmailOutlined, HeadsetMicOutlined, LocationCityOutlined, ScheduleOutlin
 //custom css
 const useStyles = makeStyles({
  contact: {
-  background: '#f9f9f9',
-  width: '100%',
-  height: 1080,
   marginTop: 40,
  },
  lines: {
@@ -20,7 +17,7 @@ const useStyles = makeStyles({
  icon: {
    marginRight: 15,
  }
-})
+});
 
 function Contact() {
  // customer css

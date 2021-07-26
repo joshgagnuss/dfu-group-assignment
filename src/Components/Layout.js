@@ -66,9 +66,8 @@ const drawerWidth = 240;
 const useStyles = makeStyles((theme) => {
    return { 
     page: {
-        background: '#f9f9f9',
         width: '100%',
-        height: 1080
+       // height: 1080
     },
     drawer: {
         width: drawerWidth,
@@ -115,7 +114,7 @@ function Layout({ children }){
                      {/* workforce header */}
                      <Typography className={classes.title} variant="h5">
                      <BuildOutlined fontSize="small"/>
-                          Workforce 
+                        Workforce 
                      </Typography>
                          {/* Login button */}
                          <Button variant="contained" color="default" size="large"
@@ -129,7 +128,6 @@ function Layout({ children }){
                          onClick={()=> { alert('clicky click')}}>
                          For Employers
                          </Button>
-
                  </Toolbar>
              </AppBar>
 
@@ -148,11 +146,10 @@ function Layout({ children }){
             </Drawer>
             {/* keeps menu items permanently visible */}
             <div className={classes.page}>
-                <div className={classes.toolbar}>
-                </div>
-            {children}
+            <div className={classes.toolbar}>
             </div>
-            
+            {children}
+            </div>  
         </div>
     );
 }

@@ -34,10 +34,6 @@ const useStyles = makeStyles({
     marginBottom: 20,
     marginLeft: 10,
   },
-  container: {
-    height: 1080,
-    width: 1920,
-  }
 })
 
 function Enquiry() {
